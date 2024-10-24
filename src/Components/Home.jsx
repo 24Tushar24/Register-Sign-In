@@ -63,7 +63,7 @@ const Home = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    // Handling the checkbox changes for hobbies
+    //  Checkbox changes for the hobbies
     const handleHobbyChange = (e) => {
         const { value, checked } = e.target;
         setFormData((prev) => {
@@ -169,7 +169,6 @@ const Home = () => {
                 pincode: formData.pincode,
             };
 
-            console.log("Payload:", newEntry); // Log the payload to check correctness
 
             try {
                 const url = 'http://localhost:3000/api/register';
@@ -316,6 +315,8 @@ const Home = () => {
                         }}
                     />
                     <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+
+                        {/* Password */}
                         <TextField
                             label="Password"
                             name="password"
@@ -355,6 +356,7 @@ const Home = () => {
                         </IconButton>
                     </div>
                     <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+
                         {/* Confirm Password */}
                         <TextField
                             label="Confirm Password"
@@ -381,8 +383,6 @@ const Home = () => {
                                 },
                             }}
                         />
-
-                        {/* Eye Icon (placed absolutely) */}
                         <IconButton
                             onClick={passwordVisibility}
                             sx={{

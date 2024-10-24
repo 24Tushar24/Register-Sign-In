@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Button, TextField, Typography, Snackbar, Alert } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const SignIn = () => {
@@ -136,6 +136,11 @@ const SignIn = () => {
                 <Button type="submit" variant="contained" color="primary" fullWidth>
                     Sign In
                 </Button>
+                <Typography align="center" variant="body2" sx={{ marginTop: 2 }}>
+                    <Link to="/forgotpassword" style={{ color: '#00796b', textDecoration: 'none' }}>
+                        Forgot Password?
+                    </Link>
+                </Typography>
             </Box>
 
             <Snackbar

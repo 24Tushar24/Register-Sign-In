@@ -10,6 +10,8 @@ import Pure from './Components/Pure';
 import Cotton from './Components/Cotton';
 import Easy from './Components/Easy';
 import Footer from './Components/Footer';
+import Forgotpassword from './Components/Forgotpassword';
+import ResetPassword from './Components/Resetpassword';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -21,11 +23,13 @@ const App = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/mens" element={<Menscollection />} />
-        <Route path="/plain" element={<Plain/>} />
-        <Route path="/textured" element={<Textured/>} />
-        <Route path="/pure" element={<Pure/>} />
-        <Route path="/cotton" element={<Cotton/>} />
-        <Route path="/easy" element={<Easy/>} />
+        <Route path="/plain" element={<Plain />} />
+        <Route path="/textured" element={<Textured />} />
+        <Route path="/pure" element={<Pure />} />
+        <Route path="/cotton" element={<Cotton />} />
+        <Route path="/easy" element={<Easy />} />
+        <Route path="/forgotpassword" element={<Forgotpassword />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
       </Routes>
     </Router>
   );
